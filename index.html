@@ -26,7 +26,13 @@
       #app p span {
         color: #1E88E5;
       }
-      #app input {
+      #input-wrapper {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      #input-wrapper input {
         margin-left: 1em;
         padding: 5px 10px;
       }
@@ -37,9 +43,9 @@
       <p>
         Hello everyone, my name is <span>{{name}}</span>, I am a mini <span>{{lang}}</span> framework for just <span>{{work}}</span>. I can bind data from <span>{{supports.0}}</span>, <span>{{supports.1}}</span> and <span>{{supports.2}}</span>. What's more, I was created by <span>{{info.author}}</span>, and was written in <span>{{info.jsVersion}}</span>. My motto is "<span>{{motto}}</span>".
       </p>
-      <section>
-        Motto: <input type="text" id="set-motto" autofocus>
-      </section>
+    </div>
+    <div id="input-wrapper">
+      Motto: <input type="text" id="set-motto" autofocus>
     </div>
     <script src="/dist/build.js"></script>
   </body>

@@ -9,7 +9,6 @@ export default class Mog {
   $setData (dataObj, fn) {
     let self = this
     let once = false
-    let _d = JSON.parse(JSON.stringify(dataObj)) // deep copy
     let $d = new Proxy(dataObj, {
       set (target, property, value) {
         if (!once) {
