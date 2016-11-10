@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>easy-es6</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        font-size: 28px;
+        font-family: Microsoft Yahei;
+      }
+      #app {
+        margin: 0 auto;
+        height: 100%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      #app p {
+        color: #333;
+        line-height: 46px;
+      }
+      #app p span {
+        color: #1E88E5;
+      }
+      #app input {
+        margin-left: 1em;
+        padding: 5px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <p>
+        Hello everyone, my name is <span>{{name}}</span>, I am a mini <span>{{lang}}</span> framework for just <span>{{work}}</span>. I can bind data from <span>{{supports.0}}</span>, <span>{{supports.1}}</span> and <span>{{supports.2}}</span>. What's more, I was created by <span>{{info.author}}</span>, and was written in <span>{{info.jsVersion}}</span>. My motto is "<span>{{motto}}</span>".
+      </p>
+      <section>
+        Motto: <input type="text" id="set-motto" autofocus>
+      </section>
+    </div>
+    <script src="/dist/build.js"></script>
+  </body>
+</html>
