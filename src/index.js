@@ -1,25 +1,18 @@
-import Mog from './mog.js'
+import Mog from './instance/index.js'
 
-let template = document.querySelector('#app').innerHTML
-
-let mog = new Mog({
-  template: template,
-  el: '#app',
+const mog = new Mog({
   data: {
-    name: 'mog',
-    lang: 'javascript',
-    work: 'data binding',
-    supports: ['String', 'Array', 'Object'],
-    info: {
-      author: 'Jrain',
-      jsVersion: 'Ecma2015'
-    },
-    motto: 'Every dog has his day'
+    name: 'Jrain',
+    address: {
+      country: 'China',
+      province: 'Guangdong',
+      city: 'Shenzhen',
+      street: {
+        num: 7,
+        block: 23
+      }
+    }
   }
 })
 
-document.querySelector('#set-motto').oninput = (e) => {
-  mog.$setData(mog.$data, ($d) => {
-    $d.motto = e.target.value
-  })
-}
+window.mog = mog
